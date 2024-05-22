@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Slideshow</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: gray;
+    }
+
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      cursor: pointer;
+    }
+
+    /* .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    } */
+  </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+  <div class="mySlides">
+    <img src="https://fifpro.org/media/fhmfhvkx/messi-world-cup.jpg?rxy=0.48356841796117644,0.31512414378031967&width=1600&height=1024&rnd=133210253587130000" alt="Image 1">
+  </div>
+
+  <div class="mySlides">
+    <img src="https://images.mlssoccer.com/image/private/t_editorial_landscape_8_desktop_mobile/prd-league/ipocdxrkbpszcnbd2hzg.jpg" alt="Image 2">
+  </div>
+
+  <div class="mySlides">
+    <img src="https://www.investopedia.com/thmb/ckPwC5ARwco1nOSCKVGE57se8MI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1245748917-99e3329a7b8147e8ab648806220ce153.jpg" alt="Image 3">
+  </div>
+
+  <div class="mySlides">
+    <img src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltcad7bd066b858c46/633ef9dca846b03282ff2b95/Social-16-9_(2).jpg?auto=webp&format=pjpg&width=3840&quality=60" alt="Image 4">
+  </div>
+
+  <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+</div>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function plusSlides(n) {
+    slideIndex += n;
+    showSlides();
+  }
+
+  function showSlides() {
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+    if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+    if (slideIndex < 0) {
+      slideIndex = slides.length - 1;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex].style.display = "block";
+    slideIndex++;
+    setTimeout(showSlides, 2000); // Change slide every 2 seconds
+  }
+</script>
+
+</body>
+</html>

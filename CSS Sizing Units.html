@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units</title>
+    <style>
+        .boxborder {
+            box-sizing: border-box;
+            border: 3px solid yellowgreen;
+            /* width: 300px; */
+            width: 80vw;
+            /* vw=viewport width */
+            height: 10vh;
+            background-color: #0b8c76;
+            margin: auto;
+            /* Margin:auto; only works for block elememts it cant be used for the inline elements */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            box-sizing: border-box;
+            border: 3px solid rgb(205, 50, 182);
+            width: 80vw;
+            /* min-width:50vw; */
+            /* height: 70vh;*/
+            /* vh=viewport height */
+            /* font-size: 20px; */
+            min-height: 80vh;
+            /* It use to take a auto heights according to our content and manage the height automatically */
+            background-color: #0b8c76;
+            margin: 25px auto;
+            /*25px is from top and bottom nad auto is from left and  right*/
+        }
+
+        .container p {
+            font-size: 2em;
+            /*em=the given pixel into given em like(by default 16 px * 2 = 2em)*/
+            font-size: 2rem;
+            /*rem=the given pixel to the Root element like html into 2 (2 is changeable value) like 2rem=24px*2*/
+            /* you can check it from going to inspect and go the the compute  */
+        }
+
+        html {
+            /* This is a Root Element */
+            font-size: 20px;
+        }
+
+        .mycont {
+            box-sizing: border-box;
+            border: 3px solid rgb(205, 50, 182);
+            background-color: rgb(207, 203, 212);
+            color: rgb(0, 0, 0);
+            font-size: 22px;
+            margin: 25px auto;
+            /* width:100vmin; */
+            width: 80vw;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>CSS Sizing Units</h1>
+    <div class="boxborder">
+        This is a box.
+
+    </div>
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem dolor deserunt, commodi reprehenderit
+            eaque architecto odit sapiente dolorum, distinctio, repudiandae doloribus! Et omnis doloremque, reiciendis,
+            nulla harum consequuntur eius commodi incidunt accusantium quas sed repellat itaque vero, rerum iusto
+            delectus modi. Velit aspernatur ad autem! Voluptatem eius consequuntur ducimus commodi. Lorem ipsum dolor
+            sit, amet consectetur adipisicing elit. Ipsum dolor accusantium quae obcaecati. Ut eveniet possimus
+            reprehenderit sequi. Ipsam dolores totam aut unde, sunt obcaecati facere. Voluptatem corporis sequi
+            consequuntur doloremque voluptas, natus excepturi dolore necessitatibus aliquam saepe! Ad quod
+            exercitationem accusamus perferendis modi. Dolor quis nam suscipit, placeat doloremque autem odio, eius
+            perferendis quasi blanditiis quae nemo consequuntur dicta voluptates soluta, sequi nesciunt incidunt maxime.
+            Illo dignissimos sequi animi. Sed inventore id, quisquam excepturi temporibus vitae tenetur nostrum facilis
+            asperiores aspernatur recusandae optio, sapiente consequuntur laudantium natus fuga distinctio cum totam
+            nisi alias? Fugiat aut aperiam ducimus eligendi accusantium. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Voluptatem, temporibus doloremque. Et dolores mollitia eius, consectetur amet quibusdam.
+            Veritatis beatae mollitia nesciunt dolor a neque laborum accusamus nemo, quisquam rem dolorum maiores
+            repellendus sit obcaecati commodi accusantium? Quae saepe nulla explicabo, autem est amet eius nemo ipsa
+            deserunt? Atque itaque velit aliquam impedit esse quos maiores et minus commodi, quod explicabo ipsam
+            recusandae beatae. Ratione accusantium modi nisi commodi recusandae optio ipsum iure dicta veritatis
+            consequatur voluptates veniam rem autem officiis distinctio qui, quam minima. Dolorum non quod placeat porro
+            velit. Eligendi repellat optio magni corrupti veniam illo tempore, impedit aliquam rem ducimus ullam, unde
+            placeat! Saepe sint reiciendis ratione eligendi pariatur quam recusandae officiis corrupti. Recusandae totam
+            impedit maiores esse aut consectetur saepe illum perspiciatis sequi ipsa accusamus cumque alias, nemo
+            aspernatur omnis nam repellat, obcaecati, tempora illo debitis quas cum possimus sed? Distinctio est
+            excepturi consequuntur, libero repellat assumenda necessitatibus tenetur veritatis laborum nulla illo
+            obcaecati recusandae explicabo ex quas quidem ratione magni perspiciatis exercitationem. Culpa nam dolorem
+            quia voluptate eaque nihil officiis animi voluptates laudantium, minima suscipit tempore molestias totam
+            amet beatae fugit nobis, quas, fugiat quidem quibusdam harum accusantium unde! Error esse nostrum
+            reprehenderit modi sunt.
+
+        </p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam cupiditate eaque velit quibusdam, pariatur veniam
+        eum iure corrupti officiis porro quos natus, amet hic iusto? Doloribus voluptatibus veritatis praesentium, saepe
+        consequuntur atque quasi repudiandae. Voluptatem commodi, velit dicta reprehenderit reiciendis facere aperiam
+        sed, nihil odio numquam laudantium dolorum eveniet quia obcaecati hic et iste quis necessitatibus deleniti
+        molestias fugiat atque delectus? Nostrum, sapiente voluptas? In atque exercitationem, placeat quas tempore
+        adipisci quia veritatis commodi veniam ab illum perferendis, aperiam fugit molestiae earum sint voluptatem totam
+        suscipit iure est blanditiis iste vel. Eligendi, odit! Sit nihil neque repudiandae voluptates ab enim, dolores
+        odit saepe at tenetur omnis accusantium? Veniam assumenda cumque praesentium hic a nam cum, qui laborum
+        dignissimos consequuntur, quasi totam, fugit voluptatem vel accusantium blanditiis illum sed nisi. Eveniet
+        delectus reprehenderit id voluptate. Culpa possimus ut, voluptatem ratione, temporibus iure accusantium, iste
+        eos fugiat commodi rem asperiores quod a. Distinctio debitis repellat inventore, delectus dicta libero assumenda
+        iusto alias quae voluptates error harum pariatur rem, perferendis animi mollitia aperiam suscipit, recusandae
+        minima cumque ducimus dolorem nam. Vel eaque voluptates saepe, cum praesentium delectus ut provident sapiente
+        veniam earum, dolorem eum nam iure sit. Beatae dignissimos reiciendis optio quaerat laboriosam.
+    </div>
+    <div class="mycont">
+        I am another container.
+    </div>
+      
+       
+</body>
+
+</html>

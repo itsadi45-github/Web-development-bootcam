@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise.3</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .parent {
+            border: 5px solid rgb(237, 234, 234);
+            border-radius: 30px;
+            height: 155vh;
+            width: 40vw;
+            padding: 4px;
+            margin: 4px;
+            position: relative;
+            top: 3px;
+            left: 450px;
+            background-color: white;
+
+        }
+
+        img {
+            height: 400px;
+            width: 40vw;
+            border-radius: 30px;
+        }
+
+        div ul li {
+            opacity: 0.4;
+            list-style: none;
+            display: inline-flex;
+            padding: 20px;
+            margin: 9px;
+            position: relative;
+            right: 130px;
+            background-color: rgb(243, 240, 237);
+            border: 2px solid gray;
+            border-radius: 30px;
+            font-style: italic;
+            letter-spacing: 5px;
+
+        }
+
+        .para1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 23px;
+            color: rgba(27, 42, 42, 0.663);
+            text-align: left;
+            margin: 10px;
+            padding: 10px;
+
+        }
+
+        h1 {
+            text-align: left;
+            position: relative;
+            left: 25px;
+            letter-spacing: 10px;
+
+        }
+
+        /* a {
+            letter-spacing: 5px;
+            background-color: rgb(216, 236, 238);
+            border: 2px solid rgb(171, 176, 175);
+            border-radius: 20px;
+            color: rgb(48, 189, 245);
+            padding: 10px;
+            text-decoration: none;
+               by the help of text-decoration:none; all the decoration or effect on your link will be disable and it will look like normal content
+
+        } */
+
+        .button button {
+            letter-spacing: 5px;
+            background-color: rgb(216, 236, 253);
+            color: rgb(14, 150, 234);
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+
+
+        }
+        .button button:hover{
+            background-color: rgb(1, 2, 3);
+            color: rgb(255, 255, 255);
+        }
+
+        #Lake {
+            letter-spacing: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div>
+            <img src="https://www.ionos.co.uk/digitalguide/fileadmin/DigitalGuide/Teaser/html-tagst.jpg" alt=" Html">
+        </div><br>
+        <ul>
+            <!-- <span></span> is also can be used here because span is an inline elemet -->
+            <li>Nature</li>
+            <li id="Lake">Lake</li>
+        </ul><br>
+        <h1>HTML Exercise 3</h1><br>
+        <p class="para1">This is the image of HTML.Which is also called Hyper Text Markup Language.Html Mainly use for
+            making websites for the clints.HTML stands for HyperText Markup Language. It's the standard markup language
+            used to create web pages. It's the backbone of any web page and provides the structure and elements that
+            define the content on a website. HTML uses markup tags to describe different types of content, such as
+            headings, paragraphs, links, images, forms, and more. These tags, represented by angle brackets
+            (&lt;tag&gt;),
+            define the various elements on a web page and their layout, appearance, and functionality. When a web
+            browser reads an HTML file, it interprets these tags to display the content in the desired format to
+            users.
+        </p>
+        <!-- <a target="_blank"
+            href="https://www.google.com/search?q=Html+images&tbm=isch&ved=2ahUKEwichZXX5biDAxXjbmwGHb6UA7oQ2-cCegQIABAA&oq=Html+images&gs_lcp=CgNpbWcQAzIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABFAAWABglRRoAHAAeACAAbMBiAGzAZIBAzAuMZgBAKoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=L-iQZdyxOOPdseMPvqmO0As&bih=945&biw=1920">Read
+            More</a>  -->
+        <!-- <button></button> tag is also can be used here -->
+        <div class="button">
+            <button>Read More</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

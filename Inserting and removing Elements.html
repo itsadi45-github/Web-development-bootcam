@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting and removing Elements</title>
+    <script src="Inserting and removing Elements.js"></script>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container red bggreen">
+        <div class="box" style="display: flex;" data-createdBy="Aditya" data-conceptBy="Ranjan">Hey i am a box!</div>
+        <div class="box">Hey i am a box!</div>
+    </div>
+    <script>
+        // let div = document.createElement("div")
+        // div.innerHTML = "I have been inserted <b>by aditya</b>"
+        // div.setAttribute("class","created")
+        // document.querySelector(".container").append(div)
+        // document.querySelector(".container").before(div)
+        // document.querySelector(".container").after(div)
+        // document.querySelector(".container").prepend(div)
+        // document.querySelector(".container").replacewith(div)
+        
+        let cont = document.querySelector(".container")
+        cont.insertAdjacentHTML("afterend","<b> I am under the water. please help me here  to much raining...... iuuuuoooo</b> ")
+        // cont.insertAdjacentHTML("beforebegin","<b> I am under the water. please help me here  to much raining...... iuuuuoooo</b> ")
+        // cont.insertAdjacentHTML("afterbegin","<b> I am under the water. please help me here  to much raining...... iuuuuoooo</b> ")
+        // cont.insertAdjacentHTML("beforeend","<b> I am under the water. please help me here  to much raining...... iuuuuoooo</b> ")
+        </script>
+</body>
+</html>

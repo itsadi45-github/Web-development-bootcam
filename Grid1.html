@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid-1</title>
+    <style>
+        .container {
+            width: 90vw;
+            height: 100vh;
+            border: 2px solid rgb(20, 15, 20);
+            display: grid;
+            /* grid-template-columns: 120px 100px; */
+            /* grid-template-rows: 100px 100px 100px; */
+            /* grid-template-columns: 1fr 2fr 1fr ; */
+            /* we can also write this */
+            /* grid-template-columns: repeat(4,1fr) ; */
+            /* grid-template-columns: repeat(4, minmax(100px,1fr)) ; */
+            grid-template-columns: repeat(4, 80px);
+            grid-template-rows: repeat(4, 70px);
+            /* grid-template-rows: 1fr 2fr 3fr ; */
+            /* it will take the  item width accrding to the fr we have given to grid templete columns */
+            gap: 44px;
+            /* or you can also write like this */
+            /* row-gap: 34px ;
+            column-gap:34px ; */
+            /* justify-content: center; */
+            /* align-content: center; */
+            /* justify-items: center; */
+            /* align-items: center; */
+            /* shorthand of justify-content: center; and align-content:center; */
+            place-content: center;
+            /* shorthand of justify-items: center; and align-items:center; */
+            place-items: center;
+        }
+
+        .items {
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+            /* we should remove the width for the gride row and gride column */
+
+        }
+
+        /* .item-4 { */
+        /* grid-row: 1/2; */
+        /* yo can write this or this bellow one the both are same */
+        /* grid-row-start: 1;
+            grid-row-end: 2;
+            
+            grid-column: 1/2;
+        } */
+
+        /* .item-2 {
+            grid-row: 1/10;
+            grid-column: 1/10;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="items item-1">1</div>
+        <div class="items item-2">2</div>
+        <div class="items item-3">3</div>
+        <div class="items item-4">4</div>
+        <div class="items item-5">5</div>
+    </div>
+</body>
+
+</html>

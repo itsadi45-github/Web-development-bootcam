@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 23px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 45px;
+            width: 45px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Given 5 boxes, Assign a random color and a random background to each box using DOM concepts
+     -->
+    <div class="container">
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+        <div class="box">Box-4</div>
+        <div class="box">Box-5</div>
+    </div>
+   
+    <!-- <script>
+              let boxes = document.getElementsByClassName("box")
+
+              boxes[0].style.backgroundColor="red"
+              boxes[1].style.backgroundColor="orange"
+              boxes[2].style.backgroundColor="blue"
+              boxes[3].style.backgroundColor='yellow'
+              boxes[4].style.backgroundColor='purple'
+
+    </script> -->
+    
+    <!-- Through Tutorials  -->
+    <script>
+        let boxes = document.querySelector(".container").children
+
+        function getRandomColor(){
+            let val1 = Math.ceil(0 + Math.random()* 255);
+            let val2 = Math.ceil(0 + Math.random()* 255);
+            let val3 = Math.ceil(0 + Math.random()* 255);
+            return `rgb(${val1}, ${val2} , ${val3})`
+        }
+        Array.from(boxes).forEach(e=>{
+            e.style.backgroundColor = getRandomColor()
+            e.style.color = getRandomColor()
+        })
+
+        /*
+        Math.random()
+0.5092331768911749
+
+0 + Math.random()* 255
+50.777849221486335
+
+0 + Math.random()* 255
+112.89625146225126
+
+0 + Math.random()* 255
+195.71283105677216
+
+Math.ceil(0 + Math.random()* 255)
+114
+
+Math.ceil(0 + Math.random()* 255)
+133
+*/
+    </script>
+</body>
+
+</html>

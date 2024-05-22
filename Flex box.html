@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FlexBox </title>
+    <style>
+        
+        .container {
+            border: 3px solid goldenrod;
+            display: flex;
+            height: 80vh;
+            /* justify-content: center; */
+            /* Horizentally makes our contenet centre  */
+            /*align-items: center;*/ /*used when we have only one lines*/
+            /* flex-direction: column; */
+            flex-direction: row;
+            /* flex-direction: row-reverse; */
+            /* this can also be used for the row */
+            /* Vertically make s our content centre */
+            /* align-items: flex-end;
+                align-items: flex-start; */
+            /* this two can also mostly used on align-items: ; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            /* justify-content: flex-end; */
+            /* justify-content: flex-start;  */
+            /* This four can also be used on justify content */
+            /* flex-direction:column-reverse; */
+            flex-wrap:wrap;
+            /*align-content: center;*/ /*if we have more than one line then we use this */
+            /* there is no justify items in felx box */
+            /* flex-wrap: wrap-reverse; */
+            /* it makes content wrap reverse */
+            /* flex-flow: row wrap;  */
+            /* row means the flex-direction and wrap means flex-wrap  */
+            gap: 10px;
+            /* row-gap: 30px; */
+            /* column-gap: 30px; */
+            /* gap: 10px 30px; Shorcout for row and column */
+        }
+          .order-1{
+            order: 1;
+          }
+          .order-2{
+            order: 2;
+          }
+          .order-3{
+            order: 3;
+          }
+        .container .item {
+            /* flex-grow: 1; */
+            border: 2px solid black;
+            /* padding: 45px; */ 
+            /* dont give padding otherwise it will overflow from the .container  */
+            /* margin:4px; */
+            height: 92px;
+            width: 92px;
+            background-color: blueviolet;
+        } 
+        .item1{
+            /* flex-grow:2;  */
+            /* cover more place for the content  */
+            flex-shrink: 2;
+            /* goes down side and cover the place */
+            align-self: center;  
+            /* diable the align-content: ; then it will work  */
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="item item1"></div>
+            <div class="item order-3"></div>
+            <div class="item order-2"></div>
+            <div class="item order-1"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </main>
+</body>
+
+</html>

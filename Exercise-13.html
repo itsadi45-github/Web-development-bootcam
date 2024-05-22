@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-13(Dynamic Website Builder)</title>
+    <style>
+        .card {
+            display: flex;
+            border: 2px solid black;
+            width: 700px;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            border-radius: 10px;
+            margin: 0px 0px 10px 0px;
+        }
+
+        .image img {
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            margin: 0px 0px 0px -6px;
+
+        }
+
+        .text h1,
+        p {
+            padding: 0px 0px 0px 10px;
+            font-family: "YouTube Noto", Roboto, Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            color:
+                #afb1b3;
+            line-height: 21px;
+            font-style: normal;
+        }
+
+        .capsule {
+
+            color: white;
+            background-color: #2e2e2ed4;
+            position: absolute;
+            width: 50px;
+            height: 25px;
+            bottom: 5px;
+            z-index: 10;
+            right: 10px;
+            border-radius: 5px;
+            font-family: "YouTube Noto", Roboto, Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .image {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="image">
+                <img src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw"
+                    alt="img">
+                <div class="capsule">13:06</div>
+            </div>
+            <div class="text">
+                <h1>Introduction to Backend | Sigma Web Dev veido #2</h1>
+                <p>CodeWithHarry . 727k Views . 2 months ago</p>
+            </div>
+        </div>
+    </div>
+    <script src="Exercise-13.js"></script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en"> -->
+
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 13</title>
+   
+</head> -->
+
+<!-- <body>
+  
+    <script>
+        function createCard(title, cName, views, monthsOld, duration, thumbnail) {
+            document.querySelector(".duration").innerHTML = duration;
+            document.querySelector(".title").innerHTML = title;
+            if (views >= 1000000) views = views / 1000000 + "M";
+            else if (views >= 1000) views = views / 1000 + "K";
+            document.querySelector(".details").innerHTML = cName + " . " + views + " views . " + monthsOld + " months ago";
+            document.querySelector(".image").src = thumbnail;
+        }
+        createCard("Introduction to Backend | Sigma Web Dev veido #2", "CodeWithHarry", 560000, 7, "31:22", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw"); 
+    </script>
+</body>
+
+</html> -->

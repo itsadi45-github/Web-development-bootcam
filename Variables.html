@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        :root { /* Declared as Globle Variable */
+            /* BY using this two variables we can eassily change our whole background-color: according to our theme; */
+            --color: rgb(51, 220, 206);
+            --seccolor: rgb(85, 120, 137);
+            --defpad:23px; /* It stands for default padding */
+            --defop:0.5; /* It stands for default opacity */
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            background-color: var(--color);
+        }
+
+        .container {
+            background-color: var(--seccolor);
+        }
+
+        ul {
+            display: flex;
+
+        }
+
+        ul li {
+            opacity: 0.3;
+            /* It stands for the darkness of chosssean content */
+             /* opacity: var(--defop); */
+            list-style: none;
+            padding:var(--defpad);
+            margin: 15px;
+            border: 3px solid var(--seccolor);
+        }
+
+        ul li:first-child {
+            --color: rgb(248, 227, 3); /* Local Variable Declared */
+            background-color: var(--color /*blue*/);
+            /* if the variable is not found then we can use and write (blue,etc) for the backup color */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, ex fugiat reprehenderit
+        officiis qui tempora accusantium. Quasi dolor facere est accusamus, ullam sapiente cupiditate iste ipsum odit.
+        Fuga, exercitationem voluptate deleniti nam saepe assumenda ullam iste eligendi animi debitis quae libero amet
+        beatae sunt porro possimus. Impedit, tenetur nemo, sunt exercitationem voluptatibus cupiditate odit natus
+        delectus corrupti quaerat, iste excepturi.</div>
+
+</body>
+
+</html>

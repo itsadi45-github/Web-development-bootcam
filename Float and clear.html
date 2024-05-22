@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float and Clear</title>
+    <style>
+        .cards{
+            border: 3px solid violet;
+            display: flow-root;/* It helps to deal with overflow problem after using float */
+        }
+        .card{
+            border: 2px solid yellowgreen;
+        }
+        img{
+            float: left;
+            /* float: right; */
+        }
+        .card:nth-child(3){
+            background-color: chocolate;
+            /* clear:right; */
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D" width="230px" height="200px" alt="Images">
+        <div class="card">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eius, eveniet ut deserunt illum obcaecati dolor? Quis, sapiente! Fugit ducimus alias excepturi necessitatibus harum aliquam incidunt dolorem ipsum accusamus a, iusto veritatis amet ad, in, perspiciatis ullam similique libero nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas est iste ea. Alias omnis consectetur blanditiis corrupti natus eaque tenetur in dolore totam voluptatibus modi recusandae ad veniam eveniet illum aliquid cum cumque voluptatem voluptas vel, dolorum nisi quae aspernatur. Iusto ea veniam cumque eligendi excepturi et molestiae, necessitatibus commodi asperiores quae. Esse, deserunt porro!
+        </div>
+        <div class="card">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea officia, sequi at saepe aut tempora labore eligendi repudiandae esse laudantium veniam! Perspiciatis, ad aliquam. Excepturi, dolorum odit impedit vel nisi quod omnis iste ratione quibusdam sit animi est voluptatem ipsam nulla perferendis possimus alias similique dicta suscipit doloremque! Officiis inventore iusto maxime ipsa possimus, dolores quasi harum. Perferendis, hic adipisci. Quas eligendi voluptas magnam laudantium alias numquam assumenda vel, voluptatem explicabo pariatur cumque corrupti omnis delectus earum aspernatur architecto labore deleniti sit voluptates itaque hic exercitationem perspiciatis nostrum tempore. At provident perferendis repudiandae qui saepe aliquid perspiciatis quia unde. Deleniti neque quo quis ducimus voluptas dicta incidunt id mollitia repellendus esse, itaque cupiditate maiores quam sunt earum! Ad quaerat cumque hic in? Quisquam error in laborum qui architecto aperiam quibusdam, similique possimus enim omnis tenetur sit pariatur, dolorem et explicabo labore odit vitae officiis, animi sed! Saepe nam sunt, fuga accusamus corrupti consequatur libero nulla, necessitatibus minus quibusdam ullam eaque porro! Deserunt, facere, praesentium incidunt doloribus commodi possimus, molestias laborum asperiores consequatur eaque unde. Veritatis voluptatem magnam dolores nihil. Quae optio perspiciatis suscipit iste. Molestiae sint ratione nisi, corrupti rem at odit reprehenderit vel libero? Iure consequuntur et optio, vitae incidunt repudiandae voluptate fuga quod aut ut nesciunt dicta qui dolorum eos beatae doloribus odit dolore praesentium soluta a. Laborum veniam possimus debitis nulla et consequatur, architecto quam nihil vitae eos cum ab expedita ad recusandae nobis nemo deserunt commodi quo tempora repellat accusantium placeat. Porro laborum quisquam magni quia cupiditate nam velit, cumque rem libero deserunt dolor voluptatem cum, earum quidem beatae, nobis omnis ratione totam minus et accusamus? Architecto saepe fuga corporis provident modi aspernatur! Minima voluptatem quibusdam tempore quas odio inventore odit tempora illum, asperiores fuga, earum ex, eveniet fugit numquam! Incidunt distinctio blanditiis consequuntur sit culpa eveniet quia pariatur alias, ea quo ducimus magni amet, maxime dicta itaque laudantium. Eveniet modi veritatis, alias laborum quia rem cum ipsum iure quos nulla quis laboriosam, inventore consequatur, veniam aliquid blanditiis ratione!</div>
+        <div class="card">Card 3</div>
+    </div>
+</body>
+</html>

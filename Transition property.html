@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Property Of CSS</title>
+    <!-- transition means going from one state to another state very smothly -->
+    <style>
+        .container {
+            background-color: rgb(147, 131, 161);
+            width: 60vw;
+            height: 40vh;
+        }
+
+        .box {
+            background-color: brown;
+            width:6vw;
+            height:4vh;
+            /* transition-property: transform; */
+            /* transition-property: background-color,transform; */
+            /* transition-property:all; */
+            /* this means where to apply transition  */
+            /* transition-duration:2s; */
+           /* this means how much second you want to aply the transition  */
+            /* transition-timing-function:ease-in-out ; */
+            /* transition-timing-function:cubic-bezier(0.81, 0.4, 0, 1.04); */
+            /* this is taken from inspect where we can create our own animation type or smothness */
+
+            /* transition-delay:1s ; */
+            /* when the transition we cancel then only one sec it will take to recover */
+            /* shorthand type of transition is here */
+            transition: all 3s cubic-bezier(0.74, 0.08, 0.04, 0.98) 1s;
+            /* The all propertty of transition are applicable here */
+        }
+        .translate{
+            transform: translateX(10vw) translateY(10vh) scaleX(3);
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+</body>
+
+</html>

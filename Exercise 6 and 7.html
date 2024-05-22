@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-6</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Poppins:ital,wght@1,200&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Poppins:ital,wght@1,100&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        /*bolder one*/
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow-x: hidden !important;
+        }
+
+        nav {
+            display: flex;
+            padding: 23px;
+
+
+        }
+
+        nav .app ul {
+
+            display: flex;
+            gap: 25px;
+            position: relative;
+            left: 643px;
+            font-size: 16px;
+            top: 11px;
+        }
+
+
+
+
+        ul li {
+            list-style: none;
+            font-family: 'Poppins', sans-serif;
+            opacity: 0.7;
+            cursor: pointer;
+            display: flex;
+            align-items: center20
+        }
+
+        img {
+            cursor: pointer;
+            height: 54px;
+            width: 174px;
+            padding-left: 126px;
+            position: relative;
+            right: -7px;
+            top: 14px;
+
+        }
+
+        .logo {
+            /* animation-name: img;
+            animation-duration: 3s;
+            animation-iteration-count: infinite; */
+            animation: img 2s cubic-bezier(0.91, 0.03, 0.26, 1.04) 0s 1;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+
+        @keyframes img {
+            from {}
+
+            to {
+                transform: scaleY(2) scaleX(2);
+            }
+        }
+
+        .img2 {
+
+            height: 43px;
+            width: 52px;
+            position: relative;
+            right: 143px;
+            top: -3px;
+            cursor: pointer;
+
+        }
+
+        main {
+            position: relative;
+            left: 59px;
+            justify-content: center;
+            padding: 45px;
+            display: flex;
+        }
+
+        .head1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            letter-spacing: 0px;
+            font-size: 57px;
+        }
+
+        strong {
+            font-style: normal;
+            font-weight: 1000;
+        }
+
+        .img3 {
+
+            height: 44px;
+            width: 142px;
+            position: relative;
+            right: 134px;
+            top: 17px;
+        }
+
+        h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 800;
+            text-align: center;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        h4 {
+            text-align: center;
+            width: 25vw;
+            height: 36px;
+            font-family: 'Open Sans', sans-serif;
+            border: 2px solid rgb(135, 195, 235);
+            background-color: rgb(78 189 217);
+            border-radius: 6px;
+            color: white;
+            padding: 10px;
+            position: relative;
+            right: 54px;
+        }
+
+        .head3 {
+            justify-content: center;
+            position: relative;
+            left: 613px;
+            padding-top: 28px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .bgblue {
+            position: relative;
+            top: 6px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .home {
+
+            display: flex;
+            padding-top: 100px;
+            width: 998vw;
+            gap: 40px;
+            position: relative;
+            left: 141px;
+            /* animation-name:adikaAnimation ;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.91, 0.03, 0.26, 1.04);
+            animation-delay: 1s;
+            animation-direction: alternate; */
+            animation: adikaAnimation 2s cubic-bezier(0.91, 0.03, 0.26, 1.04) 1s infinite;
+
+        }
+
+        @keyframes adikaAnimation {
+            from {}
+
+            to {
+                transform: translateX(80vw);
+            }
+        }
+
+        h2 {
+            font-family: 'Open Sans', sans-serif;
+            opacity: 0.99;
+            position: relative;
+            right: 110px;
+            top: 14px;
+            font-size: 30px;
+        }
+
+        .img4 {
+            height: 76px;
+            width: 76px;
+            position: relative;
+            left: -88px;
+            top: 7px;
+        }
+
+        small {
+            font-size: 13px;
+            opacity: 0.78;
+        }
+
+        .container {
+            display: flex;
+            /* display: grid;
+            justify-content: center;
+            align-items: center;
+            align-content: center; */
+            flex-wrap: wrap;
+            padding: 30px;
+            padding-left: 151px;
+        }
+
+        .box {
+            background-color: #c7c4c43d;
+            padding-top: 30px;
+            margin: 24px;
+            width: 398px;
+            height: 160px
+        }
+
+        h1 {
+            /* font-family: 'Open Sans', sans-serif; */
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            font-size: 26px;
+
+        }
+
+        .container .box ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 45px;
+        }
+
+        .container .box ul li {
+            margin: 12px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            overflow: hidden;
+            font-size: 20px;
+        }
+
+        .box1 {
+            background-color: #00b5cf;
+            border: 5px solid #00b5cf;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .box2 {
+            background-color: #5bcd5a;
+            border: 5px solid #5bcd5a;
+            border-radius: 5px;
+            color: white;
+        }
+
+        ul li svg {
+            padding: 1px 6px;
+        }
+
+        @media screen and (max-width:950px) {
+
+            .container {
+
+                /* background-color: #5bcd5a; */
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: flex-end;
+                align-items: center;
+                text-align: center;
+                align-content: flex-start;
+                flex-direction: column;
+            }
+
+            .img1 {
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                position: relative;
+                right: 115px;
+                height: 50px;
+                width: 153px;
+            }
+
+            h3 {
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 800;
+                text-align: center;
+                font-size: 18px;
+                letter-spacing: 0px;
+            }
+
+            .head1 {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+                letter-spacing: 0px;
+                font-size: 30px;
+            }
+
+            strong {
+                font-style: normal;
+                font-weight: 1000;
+            }
+
+            h4 {
+                text-align: center;
+                width: 25vw;
+                height: 36px;
+                font-family: 'Open Sans', sans-serif;
+                border: 2px solid rgb(135, 195, 235);
+                background-color: rgb(78 189 217);
+                border-radius: 6px;
+                color: white;
+                padding: 10px;
+                position: relative;
+                right: 284px;
+            }
+
+            .bgblue {
+                position: relative;
+                top: 6px;
+                font-size: 12px;
+                font-weight: bolder;
+            }
+
+            .img3 {
+                height: 17px;
+                width: 62px;
+                position: relative;
+                right: 134px;
+                top: 17px;
+            }
+
+            header {
+                gap: 23px;
+            }
+
+            nav .app ul {
+                display: flex;
+                gap: 13px;
+                position: relative;
+                left: -50px;
+                font-size: 15px;
+                top: 25px;
+            }
+            .logo {
+            /* animation-name: img;
+            animation-duration: 3s;
+            animation-iteration-count: infinite; */
+            animation: img 0s  0s 0;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+
+        @keyframes img {
+            from {}
+
+            to {
+                transform: scaleY(0) scaleX(0);
+            }
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="Exercise 6.html"><img class="img1"
+                        src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" width="215"
+                        height="50" alt="UltraEdit" data-height-percentage="58" data-actual-width="259"
+                        data-actual-height="83"></div></a>
+            <div class="app">
+                <ul>
+                    <li>Products<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            fill="none" class="injected-svg" data-src="/icons/arrow-down-01-stroke-rounded.svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="#000000">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></li>
+                    <li>Pricing<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            fill="none" class="injected-svg" data-src="/icons/arrow-down-01-stroke-rounded.svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="#000000">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></li>
+                    <li>Resources<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            fill="none" class="injected-svg" data-src="/icons/arrow-down-01-stroke-rounded.svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="#000000">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></li>
+                    <li>About<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            fill="none" class="injected-svg" data-src="/icons/arrow-down-01-stroke-rounded.svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="#000000">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></li>
+                    <img class="img2"
+                        src="https://static.vecteezy.com/system/resources/thumbnails/007/166/993/small/translate-icon-flat-style-logo-template-vector.jpg"
+                        alt="logo">
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 class="head1">Download <strong>UltraEdit</strong> for Windows &nbsp;</h1>
+        <img class="img3" src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" alt="logo">
+    </main>
+    <div class="heading">
+        <h3>Download and try UltraEdit before you buy it! This download includes the full Windows <br>version of the
+            text editor.</h3>
+    </div>
+    <div class="head3">
+        <h4>
+            <a href="/" class="bgblue">DOWNLOAD MAC OR LINUX VERSION</a>
+        </h4>
+    </div>
+    <div class="home">
+
+        <img class="img4" src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_logo_icon_white.png" alt="logo">
+
+        <h2>Download UltraEdit <small>v2023.2(released 12/15/2023) | Hotfix</small> </h2>
+
+    </div>
+    <div class="container">
+        <div class="box">
+            <h1><strong class="language">English</strong></h1>
+            <ul>
+                <a href="ue_english.exe">
+                    <li class="box1">Download 32-bit</li>
+                </a>
+                <a href="ue_english_64.exe">
+                    <li class="box2">Download 64-bit</li>
+                </a>
+            </ul>
+        </div>
+        <div class="box">
+            <h1><strong class="language">German</strong></h1>
+            <ul>
+                <a href="ue_english.exe">
+                    <li class="box1">Download 32-bit</li>
+                </a>
+                <a href="ue_english_64.exe">
+                    <li class="box2">Download 64-bit</li>
+                </a>
+            </ul>
+        </div>
+        <div class="box">
+            <h1><strong class="language">Italian</strong></h1>
+            <ul>
+                <a href="ue_english.exe">
+                    <li class="box1">Download 32-bit</li>
+                </a>
+                <a href="ue_english_64.exe">
+                    <li class="box2">Download 64-bit</li>
+                </a></a>
+            </ul>
+        </div>
+        <div class="box">
+            <h1><strong class="language">Spanish</strong></h1>
+            <ul>
+                <a href="ue_english.exe">
+                    <li class="box1">Download 32-bit</li>
+                </a>
+                <a href="ue_english_64.exe">
+                    <li class="box2">Download 64-bit</li>
+                </a>
+            </ul>
+        </div>
+        <div class="box">
+            <h1><strong class="language">French</strong></h1>
+            <ul>
+                <a href="ue_english.exe">
+                    <li class="box1">Download 32-bit</li>
+                </a>
+                <a href="ue_english_64.exe">
+                    <li class="box2">Download 64-bit</li>
+                </a>
+            </ul>
+        </div>
+        <div class="box">
+            <h1><strong class="language">Brazilian Portuguese</strong></h1>
+            <ul>
+                <a href="ue_english.exe">
+                    <li class="box1">Download 32-bit</li>
+                </a>
+                <a href="ue_english_64.exe">
+                    <li class="box2">Download 64-bit</li>
+                </a>
+            </ul>
+        </div>
+        <div class="box">
+            <h1><strong class="language">Japanese</strong></h1>
+            <ul>
+                <a href="ue_english.exe">
+                    <li class="box1">Download 32-bit</li>
+                </a>
+                <a href="ue_english_64.exe">
+                    <li class="box2">Download 64-bit</li>
+                </a>
+            </ul>
+        </div>
+        <div class="box">
+            <h1><strong class="language">Korean</strong></h1>
+            <ul>
+                <a href="ue_english.exe">
+                    <li class="box1">Download 32-bit</li>
+                </a>
+                <a href="ue_english_64.exe">
+                    <li class="box2">Download 64-bit</li>
+                </a>
+            </ul>
+        </div>
+        <div class="box">
+            <h1><strong class="language">Chinese</strong></h1>
+            <ul>
+                <a href="ue_english.exe">
+                    <li class="box1">Download 32-bit</li>
+                </a>
+                <a href="ue_english_64.exe">
+                    <li class="box2">Download 64-bit</li>
+                </a>
+            </ul>
+        </div>
+        <div class="box">
+            <h1><strong class="language">Traditional Chinese</strong></h1>
+            <ul>
+                <a href="ue_english.exe">
+                    <li class="box1">Download 32-bit</li>
+                </a>
+                <a href="ue_english_64.exe">
+                    <li class="box2">Download 64-bit</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

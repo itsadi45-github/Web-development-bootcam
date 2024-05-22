@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters Property</title>
+    <style>
+        /* img{
+            filter: blur(2px);
+        } */
+        /* use MDN Reference for more filters */
+        .img1{
+                       filter: brightness(122%) contrast(200%);
+        }
+        .img2{
+                 /* filter: grayscale(200%); */
+                 filter:sepia(200%);
+        }
+        .img3{
+               /* filter: invert(1); */
+               /* filter: invert(0.61); */
+               filter: opacity(0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="img1" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Technology_Trends.jpg" alt="Technology_Trends">
+        <img class="img2" src="https://ichef.bbci.co.uk/images/ic/640x360/p0fqd2bp.jpg" alt="messi">
+        <img class="img3" src="https://imageio.forbes.com/specials-images/imageserve/6491a41e82867c2b3f8901ca/Neymar-could-return-to-FC-Barcelona-this-summer-/960x0.jpg?format=jpg&width=960" alt="jr">
+    </div>
+</body>
+</html>

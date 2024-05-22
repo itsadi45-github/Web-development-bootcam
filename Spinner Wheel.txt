@@ -1,0 +1,103 @@
+html files:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Spinner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="spinner-container">
+        <div id="spinner"></div>
+        <button onclick="spinWheel()">Spin</button>
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+CSS files:
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#spinner-container {
+    text-align: center;
+}
+
+#spinner {
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(red, yellow, green, yellow, red);
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: spin 2s linear infinite;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+Java-Script Files:
+
+var spinning = false;
+
+function spinWheel() {
+    if (!spinning) {
+        spinning = true;
+        var spinner = document.getElementById("spinner");
+        var resultText = document.getElementById("result");
+
+        // Generate a random degree for spinning
+        var randomDegree = Math.floor(Math.random() * (360 - 180) + 180);
+
+        // Apply the rotation animation
+        spinner.style.transition = "transform 3s ease-out";
+        spinner.style.transform = "rotate(" + randomDegree + "deg)";
+
+        // Display the result after spinning
+        setTimeout(function () {
+            spinning = false;
+            spinner.style.transition = "none";
+            spinner.style.transform = "rotate(0deg)";
+
+            // Determine the discount based on the degree
+            var discount = calculateDiscount(randomDegree);
+            resultText.innerHTML = "Congratulations! You've won a " + discount + "% discount.";
+        }, 3000);
+    }
+}
+
+function calculateDiscount(degrees) {
+    // You can customize the discount levels based on the spinner's degree
+    if (degrees >= 0 && degrees < 60) {
+        return 10;
+    } else if (degrees >= 60 && degrees < 120) {
+        return 20;
+    } else if (degrees >= 120 && degrees < 180) {
+        return 30;
+    } else if (degrees >= 180 && degrees < 240) {
+        return 40;
+    } else if (degrees >= 240 && degrees < 300) {
+        return 50;
+    } else {
+        return 0;
+    }
+}
+

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(255, 255, 255);
+
+
+        }
+
+        :root {
+            --color: green;
+            --seccolor: orange;
+            --primary-color:rgba(235, 136, 225, 0.637);
+            --text-color:rgba(255, 255, 255, 0.849);
+        }
+
+        nav .logo {
+            color: var(--color);
+            font-weight: bolder;
+            padding: 30px;
+            font-size: 28px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            cursor: pointer;
+
+        }
+
+        .lists ul {
+            --color: rgba(43, 43, 45, 0.936);
+            display: flex;
+            /* margin:px; */
+            padding: 20px;
+            /* padding-bottom: 29px; */
+            gap: 40px;
+            list-style: none;
+            position: absolute;
+            left: 350px;
+            top: 28px;
+            color: var(--color);
+            font-weight: bold;
+
+
+            /* bottom: 20px; */
+        }
+        .lists ul li{
+            cursor: pointer;
+        }
+
+        #signup {
+            font-size: 20px;
+            background-color: rgb(7, 142, 12);
+            color: yellowgreen;
+            border-radius: 5px;
+            border: 2px solid rgb(199, 199, 178);
+            letter-spacing: 3px;
+            cursor: pointer;
+
+
+
+        }
+
+        #login {
+            font-size: 20px;
+            background-color: rgb(7, 142, 12);
+            color: yellowgreen;
+            border-radius: 3px;
+            letter-spacing: 3px;
+            border: 2px solid rgb(208, 208, 186);
+            cursor: pointer;
+
+
+        }
+
+        .head {
+            border-bottom: 2px solid rgb(197, 194, 194);
+            background-color: antiquewhite;
+        }
+
+        .lists2 ul {
+            display: flex;
+            gap: 45px;
+            text-align: center;
+            position: absolute;
+            left: 450px;
+            font-size: 20px;
+
+        }
+
+        .lists2 ul li {
+            list-style: none;
+            --color: rgb(126, 27, 83);
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: var(--color);
+            cursor: pointer;
+
+
+
+        }
+
+        .bor {
+            border-bottom: 2px solid rgb(110, 109, 109);
+            box-shadow: 5px 5px 10px 5px #dad6d6;
+
+        }
+
+        #flag .boxes {
+            border: 2px solid blueviolet;
+            padding: 3px;
+            margin: 3px;
+            border: none;
+
+        }
+
+        .box1 {
+            width: 98vw;
+            height: 30vh;
+            background-color: orange;
+
+        }
+
+        .box2 {
+            width: 98vw;
+            height: 30vh;
+            background-color: white;
+        }
+
+        .box3 {
+            width: 98vw;
+            height: 30vh;
+            background-color: green;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="head">
+        <nav>
+            <div class="logo">
+                &lt;/&gt;CodeWithME
+            </div>
+
+            </div>
+        </nav>
+        <div class="lists">
+            <ul>
+                <li>Home</li>
+                <li>Courses</li>
+                <li>Tutorial</li>
+                <li>Blog</li>
+                <li>Notes</li>
+                <li>Contact</li>
+                <li>My Gear</li>
+                <li>Work With Us</li>
+                <div id="login">Login</div>
+                <div id="signup">Sign Up</div>
+
+            </ul>
+        </div><br>
+    </header><br>
+
+    <main class="main">
+        <div class="lists2">
+            <ul>
+                <li>Html</li>
+                <li>Css</li>
+                <li>JS</li>
+                <li>Java</li>
+                <li>C</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>PHP</li>
+                <li>React JS</li>
+            </ul>
+        </div><br><br>
+        <div class="bor"></div>
+
+    </main><br>
+    <div id="flag">
+        <div class="boxes box1"></div>
+        <div class="boxes box2"></div>
+        <div class="boxes box3"></div>
+    </div>
+</body>
+
+</html>

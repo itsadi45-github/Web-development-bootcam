@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations Property Of CSS</title>
+    <style>
+          .container{
+             background-color: aquamarine;
+             height: 80vh;
+             width: 30vw;
+          }
+          .box{
+                  height: 34px;
+                  width: 45px;
+                  /* background-color: blueviolet; */
+                  /* animation-name:adiKaAnimation ;
+                  animation-duration:2s;
+                  animation-iteration-count: infinite;
+                  animation-timing-function: cubic-bezier(0.54, 0.06, 0, 1.04);
+                  animation-delay: 2s; */
+                  /* animation-direction: reverse; */
+                  /* animation-play-state: paused; */
+                  /* when ever we want to pause we can doo  */
+                  /* animation-play-state: running; */
+                  /* here is the shorthand of animation  */
+                  /* animation: name duration timing-function delay iteration-count direction fill-mode; */ 
+                  /* if we miss any property from middle or last or anywhere in the animation property then also it will work */
+                  animation: adiKaAnimation 3s  cubic-bezier(0.54, 0.06, 0, 1.04) 2s infinite,
+                  adi2 3s  cubic-bezier(0.54, 0.06, 0, 1.04) 2s infinite;
+                  /* animation-fill-mode: forwards; is not used more */
+                  
+          }
+          @keyframes adiKaAnimation{
+           from{
+              background-color: chartreuse;
+           }
+            to{
+                transform: translateX(500px);
+                background-color: blue;
+            }
+          }
+          @keyframes adi2 {
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(200deg);
+            }
+            50%{
+                transform: rotate(220deg);
+            }
+            80%{
+                transform: rotate(300deg);
+            }
+            100%{
+                transform: rotate(310deg);
+            }
+            
+          }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            BOX
+        </div>
+    </div>
+</body>
+</html>

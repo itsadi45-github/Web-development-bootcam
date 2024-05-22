@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms Master class</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            height: 50px;
+            width: 50px;
+            background-color: bisque;
+            border: 3px solid black;
+            /* transform: rotateX(50deg); */
+            /* transform: rotatey(50deg); */
+            /* transform: rotatez(50deg); */
+            /* transform: rotate(90deg); */
+            /* transform: rotate(270deg);
+            transform-origin: 0% 0%;  this can also be used */
+            transform: rotate(0.125turn);
+            transform-origin: 0% 0%;
+            /* transform-origin: 0% 0%; used for roation through particular point  */
+            /* 1turn means the 360degree rotaion  */
+            /* transform: rotate(0.25turn); turn is also an unit where 0.25 is 90degree rotation  */
+            /* transform: rotate(90deg); this will make the content rotated 90 degree and we can put degree according to our neeed */
+            /* transform: scale(1.5); */
+            /* transform: scale(1.5); it makes our box increase the size  */
+            /* transform: scaleX(45deg);  */
+            /* transform:scale3d(44deg) */
+            /* transform: skew(5deg);  */
+            /* transform: skew(5deg); helps to expand the axis of the box*/
+            /* transform: skewX(55deg); */
+            /* transform: skewY(55deg); */
+            /* transform: skew(); is not applicable for z-axis  */
+            /* transform: translate(100%);  */
+            /* transform: translate(100%); important property for our css */
+            /* transform: translateY(34%) skew(40deg) translateX(200%);  */
+            /* transform: translateY(34%) skew(40deg) translateX(200%); this is called a multiple transform property */
+            /* transform: translateY(-100%) skew(30deg) translateX(50%); */
+            /* transform: translateY(-100%); this property is used for basically nav bar too make our nav bar outside th content  */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* This three used to make our inside content be on center */
+        }
+
+        .container {
+            height: 80vh;
+            width: 80vw;
+            border: 3px solid palevioletred;
+            position: relative;
+            left: 126px;
+            top: 43px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            box
+        </div>
+    </div>
+</body>
+
+</html>

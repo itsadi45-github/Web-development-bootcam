@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More CSS Selectors</title>
+    <style>
+        /* .box:first-child{
+            background-color: blueviolet;
+        } */
+        /* .box::first-line{
+            color: blue;
+        } */
+        /* .boxes *{
+            color: crimson;
+            border: 3px solid royalblue ;
+        }
+        /* Heres a Attribute selectors bellow*/
+          /* [data-color="primary"]{
+            margin-top: 33px;
+          } */ 
+          /* .box:nth-child(even){
+            background-color: aqua;
+          } */
+          /* .box:nth-child(odd){
+            background-color: rgb(9, 123, 59);
+          } */
+          /* .box:nth-last-child(1){
+            /*this is used to select the child from the last */
+            /* background-color: rgb(244, 7, 209);
+          } */ 
+          .boxes::before{
+            content:"Hey i am aditya sarraf";
+            color: rgb(207, 47, 47);
+            /* Dont forget to give double inverted comma("") in the content*/
+           /* by dynamically  we can insert element on the html using CSS  */
+            /*this can be called Pseudo elements */
+          }
+          .boxes::after{
+            content:"hello every one i am aditya sarraf";
+            color: rgb(14, 106, 163);
+
+          }
+          ::selection{
+            /* If any user selects your texts or any elements then it will work for that selection */
+            color: brown;
+            background-color: blueviolet;
+          }
+          /* Letter selector */
+          .box::first-letter{
+            color:rgb(188, 158, 12);
+            /* background-color: rgb(141, 67, 67); */
+            font-size: 25px;
+          }
+          /* input selector is here below */
+          input::placeholder{
+            /* this property is used for the forms  */
+            color: rgb(36, 33, 39);
+            /* font-size: 30px; */
+          }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">I am a first box.</div>
+        <div class="box">Hey i am a Box.</div>
+        <div class="box">Hey i am a Box.</div>
+        <input type="text" placeholder="Write your name here.">
+    </div>
+</body>
+
+</html>

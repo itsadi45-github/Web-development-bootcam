@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking Terminal</title>
+    <style>
+        body {
+            background-color: #0f0;
+            /* Green background */
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .terminal {
+            background-color: #000;
+            color: #0f0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            /* Allow wrapping of lines */
+            word-wrap: break-word;
+            /* Break long words */
+            font-size: 17px;
+        }
+
+        .blinking-dots::after {
+            content: ' . . .';
+            animation: blink 0.1s infinite ease-in-out;
+            /* Continuous blinking */
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                color: transparent;
+            }
+
+            50% {
+                color: #0f0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Create a hacking Simulator which has green background and it shows these messages with random delay of 1 to 7 seconds 
+    
+    Initializing Hacking...
+    Reading Your Files...
+    Password files Detected...
+    Sending all passwords and personal files to server...
+    Cleaning up...
+
+    The three dots must blink so that it looks like a real terminal
+    -->
+    <div class="terminal">
+        <pre id="output"></pre>
+    </div>
+
+    <script src="Exercise-14.js">
+        const messages = [
+            "Initializing Hacking",
+            "Reading Your Files",
+            "Password files Detected",
+            "Sending all passwords and personal files to server",
+            "Cleaning up"
+        ];
+
+        async function displayMessages(index = 0) {
+            if (index >= messages.length) return;
+
+            const output = document.getElementById('output');
+            const message = messages[index];
+
+            await displayMessageWithDelay(message);
+
+            displayMessages(index + 1); // Recur for the next message
+        }
+
+        function getRandomDelay() {
+            return Math.floor(Math.random() * 7000) + 1000; // Random delay between 1 and 7 seconds
+        }
+
+        function displayMessageWithDelay(message) {
+            return new Promise(resolve => {
+                const delay = getRandomDelay();
+                const messageElement = document.createElement('div');
+                const textNode = document.createTextNode(message);
+                const blinkingDots = document.createElement('span');
+                blinkingDots.classList.add('blinking-dots');
+
+                messageElement.appendChild(textNode);
+                messageElement.appendChild(blinkingDots);
+                output.appendChild(messageElement);
+
+                // Update the text content to "Done" after the delay
+                setTimeout(() => {
+                    blinkingDots.textContent = ' . . .'; // Clear the dots after the delay
+                    resolve();
+                }, delay);
+            });
+        }
+
+        displayMessages();
+
+    </script>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-const messages = [
+let messages = [
     "Initializing Hacking",
     "Reading Your Files",
     "Password files Detected",
@@ -38,6 +38,16 @@ function displayMessageWithDelay(message) {
             blinkingDots.textContent = ' . . .'; // Clear the dots after the delay
             resolve();
         }, delay);
+        // setInterval(() => {
+        //     let last = document.getElementById('output')
+        //     last = [last.length - 1]
+        //     if (last.innerHTML.endsWith("...")) {
+        //         last.innerHTML = last.innerHTML.slice(0, last.innerHTML.length - 3)
+        //     }
+        //     else {
+        //         last.innerHTML = last.innerHTML + "."
+        //     }
+        // }, 700);
     });
 }
 

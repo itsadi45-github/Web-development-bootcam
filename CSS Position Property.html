@@ -1,61 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Css Position Properties</title>
-   <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Position Properties</title>
+    <style>
       * {
-         margin: 0;
-         padding: 0;
+        margin: 0;
+        padding: 0;
       }
 
       .box {
-         height: 20vh;
-         width: 80vw;
-         border: 3px solid purple;
-         padding: 3px;
-         margin: 3px;
+        height: 20vh;
+        width: 80vw;
+        border: 3px solid purple;
+        padding: 3px;
+        margin: 3px;
       }
 
       .box1 {
-         background-color: brown;
-         /*position: sticky;*/
-         /* It helps to create nav bars like is we scroll down it will not goo down with the relatable content */
-         /* top: 0px;
-         margin: 0px;
+        background-color: brown;
+        /* position: sticky; */
+        /* It helps to create nav bars like is we scroll down it will not goo down with the relatable content */
+        /* top: 0px; */
+         /* margin: 0px;
          padding: 0px;
          height: 111px;
          width: 100%; */
-         position: absolute;
-         /* it wroks on the bassis of nearest position like .parent hade position absolute so it never go outside the parent  */
-         top: 0px;
-         left: 3px;
+        position: absolute;
+        /* it wroks on the bassis of nearest position like .parent hade position absolute so it never go outside the parent  */
+        top: 0px;
+        left: 3px;
       }
 
       .box2 {
-         background-color: aqua;
-         /* position: relative;
+        background-color: aqua;
+        /* position: relative;
          top: -45px;
          left: 80px; */
+        /* z-index: 1; */
       }
 
       .box3 {
-         background-color: burlywood;
+        background-color: burlywood;
       }
 
       .box4 {
-         background-color: blue;
-         /*position: fixed; */
-         /* It helps to make our content fixed after scrollling also it swill show on our screeen */
-         /* bottom: 0px;
+        background-color: blue;
+        /*position: fixed; */
+        /* It helps to make our content fixed after scrollling also it swill show on our screeen */
+        /* bottom: 0px;
          left: 200px;
          height: 111px; */
       }
 
       .box5 {
-         background-color: gray;
+        background-color: gray;
       }
 
       /* .box1 .unorder li {
@@ -71,33 +71,25 @@
 
 
       } */
-
-
-
-
       .parent {
-         /* position: absolute; */
-         /* position: relative; */
-         /* top: 56px;
+        position: absolute;
+        /* position: relative; */
+        /* top: 56px;
          left: 50px; */
-         margin: 43px;
-         padding: 43px;
-         border: 3px solid black;
-         /* Exception: transform, filter, or perspective properties can also make an element appear as positioned */
-         /* transform: translate(0); */
-         /* filter: invert(0); */
-         perspective: 0em;
+        margin: 43px;
+        padding: 43px;
+        border: 3px solid black;
+        /* Exception: transform, filter, or perspective properties can also make an element appear as positioned */
+        /* transform: translate(0); */
+        /* filter: invert(0); */
+        /* perspective: 0em; */
       }
-   </style>
-</head>
-
-<body>
-   <div class="parent">
-
-
-
+    </style>
+  </head>
+  <body>
+    <div class="parent">
       <div class="box box1">
-         <!-- <ul class="unorder">
+        <!-- <ul class="unorder">
             <li>Home</li>
             <li>About</li>
             <li>Contact</li>
@@ -107,8 +99,6 @@
       <div class="box box3"></div>
       <div class="box box4"></div>
       <div class="box box5"></div>
-
-   </div>
-</body>
-
+    </div>
+  </body>
 </html>

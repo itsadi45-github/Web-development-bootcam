@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    <style>
+    /* =========================
+       GLOBAL RESET
+    ========================== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", "Segoe UI", sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+
+        background:
+            radial-gradient(circle at 15% 20%, rgba(255, 0, 60, 0.15), transparent 30%),
+            radial-gradient(circle at 85% 80%, rgba(255, 70, 70, 0.12), transparent 30%),
+            #080808;
+
+        color: #ffffff;
+    }
+
+    /* =========================
+       FORM CARD
+    ========================== */
+    form {
+        width: 100%;
+        max-width: 650px;
+        padding: 40px;
+
+        background: rgba(20, 20, 20, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+
+        box-shadow:
+            0 25px 80px rgba(0, 0, 0, 0.65),
+            0 0 40px rgba(255, 0, 60, 0.08);
+
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Red glowing top line */
+    form::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 10%;
+        width: 80%;
+        height: 2px;
+
+        background: linear-gradient(
+            90deg,
+            transparent,
+            #ff1744,
+            #ff4d67,
+            transparent
+        );
+
+        box-shadow: 0 0 20px #ff1744;
+    }
+
+    /* =========================
+       FORM GROUPS
+    ========================== */
+    form > div {
+        margin-bottom: 22px;
+    }
+
+    /* =========================
+       LABELS
+    ========================== */
+    label {
+        display: block;
+        margin-bottom: 8px;
+
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+
+        color: #e8e8e8;
+    }
+
+    /* =========================
+       INPUTS
+    ========================== */
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 14px 16px;
+
+        color: #ffffff;
+        background: #111111;
+
+        border: 1px solid #292929;
+        border-radius: 12px;
+
+        outline: none;
+        font-size: 15px;
+
+        transition: 0.3s ease;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: #777777;
+    }
+
+    input:hover,
+    select:hover,
+    textarea:hover {
+        border-color: #444444;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #ff1744;
+
+        box-shadow:
+            0 0 0 3px rgba(255, 23, 68, 0.12),
+            0 0 20px rgba(255, 23, 68, 0.08);
+
+        background: #151515;
+    }
+
+    /* =========================
+       DATE INPUT
+    ========================== */
+    input[type="date"] {
+        color-scheme: dark;
+    }
+
+    /* =========================
+       SELECT
+    ========================== */
+    select {
+        cursor: pointer;
+    }
+
+    select option {
+        background: #151515;
+        color: #ffffff;
+    }
+
+    /* =========================
+       SUBSCRIPTION
+    ========================== */
+    form > div p {
+        margin-bottom: 12px;
+
+        font-size: 14px;
+        font-weight: 600;
+        color: #e8e8e8;
+    }
+
+    /* Hide default radio buttons */
+    input[type="radio"] {
+        display: none;
+    }
+
+    /* Radio labels */
+    input[type="radio"] + label {
+        display: inline-flex;
+
+        padding: 10px 18px;
+        margin: 0 6px 0 0;
+
+        border: 1px solid #292929;
+        border-radius: 50px;
+
+        color: #aaa;
+        background: #111111;
+
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    input[type="radio"] + label:hover {
+        border-color: #ff1744;
+        color: #ffffff;
+    }
+
+    input[type="radio"]:checked + label {
+        color: #ffffff;
+
+        background: linear-gradient(
+            135deg,
+            #ff1744,
+            #d50032
+        );
+
+        border-color: #ff1744;
+
+        box-shadow:
+            0 5px 20px rgba(255, 23, 68, 0.25);
+    }
+
+    /* =========================
+       CHECKBOX
+    ========================== */
+    #terms {
+        accent-color: #ff1744;
+        width: 17px;
+        height: 17px;
+        cursor: pointer;
+        vertical-align: middle;
+    }
+
+    #terms + label {
+        display: inline;
+        margin-left: 6px;
+
+        color: #999;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    /* =========================
+       TEXTAREA
+    ========================== */
+    textarea {
+        resize: vertical;
+        min-height: 110px;
+    }
+
+    /* =========================
+       SUBMIT BUTTON
+    ========================== */
+    button {
+        width: 100%;
+        padding: 15px;
+
+        border: none;
+        border-radius: 12px;
+
+        color: #ffffff;
+        background: linear-gradient(
+            135deg,
+            #ff1744,
+            #d50032
+        );
+
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+
+        cursor: pointer;
+
+        box-shadow:
+            0 10px 30px rgba(255, 23, 68, 0.25);
+
+        transition: 0.3s ease;
+    }
+
+    button:hover {
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 15px 35px rgba(255, 23, 68, 0.4);
+    }
+
+    button:active {
+        transform: translateY(0);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+    @media (max-width: 600px) {
+
+        body {
+            padding: 20px 12px;
+        }
+
+        form {
+            padding: 28px 20px;
+            border-radius: 18px;
+        }
+
+        input[type="radio"] + label {
+            padding: 9px 14px;
+            margin-bottom: 8px;
+        }
+    }
+
+    @media (max-width: 400px) {
+
+        form {
+            padding: 24px 16px;
+        }
+
+        input[type="radio"] + label {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+</style>
+  </head>
+  <body>
+    <form action="/submit.php">
+      <!-- Text input for Name -->
+      <div>
+        <label for="Name">Name</label>
+        <input id="Name" type="text" placeholder="Enter Name" />
+      </div>
+      <!-- Phone input -->
+      <div>
+        <label for="phone">Phone</label>
+        <input id="Name" type="tel" placeholder="Enter Phone" required />
+      </div>
+      <!-- Email input -->
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Enter Email" required />
+      </div>
+      <!-- Password input -->
+      <div>
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter password"
+          required
+        />
+      </div>
+      <!-- Date input -->
+      <div>
+        <label for="dob">Date of Birth</label>
+        <input id="dob" type="date" required />
+      </div>
+      <!-- Dropdown (select input) for Gender -->
+      <div>
+        <label for="gender">Gender</label>
+        <select id="gender" required>
+          <option value="" disabled selected>Select Gender</option>
+          <option value="Male" disabled selected>Male</option>
+          <option value="Female" disabled selected>Female</option>
+          <option value="Other" disabled selected>Other</option>
+        </select>
+      </div>
+      <!-- Radio buttons for Subscription Plan -->
+        <div>
+            <p>Subscription Plan</p>
+            <input id="basic" type="radio" name="subscription" value="basic">
+            <label for="basic">Basic</label>
+
+            <input id="premium" type="radio" name="subscription" value="premium">
+            <label for="premium">Premium</label>
+
+            <input id="vip" type="radio" name="subscription" value="vip">
+            <label for="vip">VIP</label>
+        </div>
+        <!-- Checkbox for agreeing to terms -->
+        <div>
+            <input id="terms" type="checkbox" required>
+            <label for="terms">I agree to the terms and conditions</label>
+        </div>
+
+        <!-- Textarea for Comments -->
+        <div>
+            <label for="comments">Comments</label>
+            <textarea id="comments" placeholder="Enter your comments" rows="4"></textarea>
+        </div>
+
+        <!-- Submit button -->
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <!-- Form ends here -->
+
+    </form>
+  </body>
+</html>

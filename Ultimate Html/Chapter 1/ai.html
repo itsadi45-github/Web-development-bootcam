@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Useful Links</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      /* Header */
+      header {
+        background-color: #333;
+        color: white;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+      }
+
+      header h1 {
+        font-size: 16px;
+      }
+
+      #clock {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      /* Links */
+      .links {
+        margin-top: 14px;
+      }
+
+      .links a {
+        display: inline-block;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        font-size: 8px;
+        padding: 6px 12px;
+        margin: 0 4px;
+        border-radius: 2px;
+      }
+
+      .links a:hover {
+        background-color: #0056b3;
+      }
+
+      /* Footer */
+      footer {
+        margin-top: 12px;
+        font-size: 8px;
+        color: #555;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Useful Links</h1>
+
+      <!-- Clock -->
+      <div id="clock"></div>
+    </header>
+
+    <div class="links">
+      <a href="https://www.google.com" target="_blank">Google</a>
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+      <a href="https://www.youtube.com" target="_blank">YouTube</a>
+      <a href="https://www.twitter.com" target="_blank">Twitter</a>
+    </div>
+
+    <footer>© 2024 Simple Links Page</footer>
+
+    <script>
+      function showTime() {
+        let time = new Date();
+
+        let hours = time.getHours();
+        let minutes = time.getMinutes();
+        let seconds = time.getSeconds();
+
+        let ampm = hours >= 12 ? "PM" : "AM";
+
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+
+        hours = String(hours).padStart(2, "0");
+        minutes = String(minutes).padStart(2, "0");
+        seconds = String(seconds).padStart(2, "0");
+
+        document.getElementById("clock").innerHTML =
+          hours + ":" + minutes + ":" + seconds + " " + ampm;
+      }
+
+      showTime();
+
+      setInterval(showTime, 1000);
+    </script>
+  </body>
+</html>

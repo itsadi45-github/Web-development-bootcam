@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e1b4b);
+        min-height: 100vh;
+        padding: 50px 20px;
+        color: white;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 42px;
+        margin-bottom: 35px;
+        background: linear-gradient(90deg, #a78bfa, #38bdf8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 1px;
+    }
+
+    table {
+        width: 85%;
+        max-width: 900px;
+        margin: auto;
+        border-collapse: collapse;
+        overflow: hidden;
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    thead {
+        background: linear-gradient(90deg, #7c3aed, #2563eb);
+    }
+
+    th {
+        padding: 18px;
+        text-align: left;
+        font-size: 17px;
+        letter-spacing: 0.5px;
+    }
+
+    td {
+        padding: 16px 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        color: #e2e8f0;
+        transition: 0.3s ease;
+    }
+
+    tbody tr {
+        transition: 0.3s ease;
+    }
+
+    tbody tr:hover {
+        background: rgba(139, 92, 246, 0.18);
+        transform: scale(1.01);
+    }
+
+    tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* Salary styling */
+    td:last-child {
+        color: #67e8f9;
+        font-weight: bold;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 600px) {
+        body {
+            padding: 30px 10px;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 12px 10px;
+            font-size: 14px;
+        }
+    }
+</style>
+</head>
+<body>
+    <h1>Tables in Html</h1>
+    <table>
+        <!-- head of the table -->
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <!-- body of the table  -->
+        <tbody>
+               <tr>
+                <td>Harry</td>
+                <td>Developer</td>
+                <td>30,000</td>
+               </tr>
+               <tr>
+                <td>Aditya</td>
+                <td>Editor</td>
+                <td>40,000</td>
+               </tr>
+               <tr>
+                <td>Sulav</td>
+                <td>Marketer</td>
+                <td>45,000</td>
+               </tr>
+               <tr>
+                <td>Ritesh</td>
+                <td>Con-Creator</td>
+                <td>60,000</td>
+               </tr>
+                <td>Thank</td>
+                <td colspan="2" >You</td>
+               </tr>
+        </tbody>
+    </table>
+</body>
+</html>

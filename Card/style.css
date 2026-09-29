@@ -1,0 +1,23 @@
+/* =========================================================
+   ALPINIST - style.css
+   ---------------------------------------------------------
+   Your original visual styling is Tailwind CSS.
+
+   IMPORTANT:
+   - The Tailwind configuration stays in index.html because
+     Tailwind CDN reads that JavaScript configuration there.
+   - The custom CSS utilities from your original file are kept here.
+   - No visual design values have been changed.
+   ========================================================= */
+
+@layer utilities {
+            .glass-panel {
+                @apply bg-white/95 dark:bg-surface-container/95 backdrop-blur-xl border border-outline-variant/30 shadow-sm shadow-primary/5;
+            }
+            .chip-primary {
+                @apply bg-[#E0F2F1] text-primary px-4 py-1 rounded-full font-label-md text-label-md transition-colors hover:bg-primary hover:text-white cursor-pointer;
+            }
+            .btn-primary {
+                @apply bg-primary text-white rounded-full px-8 py-3 font-label-lg text-label-lg shadow-sm hover:bg-primary/90 hover:-translate-y-0.5 transition-all inline-flex items-center justify-center;
+            }
+        }

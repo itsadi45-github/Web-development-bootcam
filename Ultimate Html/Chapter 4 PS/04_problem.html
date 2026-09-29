@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scores</title>
+    <style>
+        /* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(37, 99, 235, 0.25),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(14, 165, 233, 0.18),
+            transparent 35%
+        ),
+        #070b14;
+
+    color: white;
+}
+
+
+/* ================================
+   TABLE CONTAINER
+================================ */
+
+.table-container {
+    width: 100%;
+    max-width: 850px;
+
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 22px;
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+h1 {
+    font-size: 30px;
+    font-weight: 750;
+
+    margin-bottom: 6px;
+
+    background: linear-gradient(
+        90deg,
+        #38bdf8,
+        #818cf8
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ================================
+   SUBTITLE
+================================ */
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: 14px;
+
+    margin-bottom: 28px;
+}
+
+
+/* ================================
+   TABLE
+================================ */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+}
+
+
+/* ================================
+   TABLE HEADER
+================================ */
+
+thead {
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+}
+
+th {
+    padding: 17px 20px;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: white;
+}
+
+
+/* ================================
+   TABLE BODY
+================================ */
+
+td {
+    padding: 18px 20px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 15px;
+}
+
+
+/* ================================
+   ROW EFFECT
+================================ */
+
+tbody tr {
+    background: rgba(255, 255, 255, 0.025);
+
+    transition: 0.25s ease;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+tbody tr:hover {
+    background: rgba(56, 189, 248, 0.1);
+
+    transform: scale(1.01);
+}
+
+
+/* ================================
+   SCORE
+================================ */
+
+.score {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-width: 45px;
+    height: 32px;
+
+    padding: 0 10px;
+
+    border-radius: 8px;
+
+    background: rgba(56, 189, 248, 0.12);
+
+    border: 1px solid rgba(56, 189, 248, 0.25);
+
+    color: #38bdf8;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 0 15px rgba(56, 189, 248, 0.08);
+}
+
+
+/* ================================
+   LAST ROW
+================================ */
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .table-container {
+        padding: 22px 15px;
+
+        border-radius: 18px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    th,
+    td {
+        padding: 14px 10px;
+
+        font-size: 13px;
+    }
+
+    .score {
+        min-width: 38px;
+        height: 29px;
+    }
+}
+    </style>
+</head>
+<body>
+       <table>
+        <!-- head of the table -->
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Score</th>
+                <th>Match</th>
+            </tr>
+        </thead>
+        <!-- body of the table  -->
+        <tbody>
+               <tr>
+                <td>Virat Kholi</td>
+                <td>99</td>
+                <td>IPL 2024</td>
+               </tr>
+               <tr>
+                <td>Rohit Sharma</td>
+                <td>56</td>
+                <td>IPL 2023</td>
+               </tr>
+               <tr>
+                <td>Ms Dhoni</td>
+                <td>89</td>
+                <td>IPL 2026</td>
+               </tr>
+               <tr>
+                <td>Rajat patidar</td>
+                <td>55</td>
+                <td>IPL 2027</td>
+                </tr>
+        </tbody>
+    </table>
+</body>
+</html>

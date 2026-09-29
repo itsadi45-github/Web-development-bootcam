@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS FlexBox </title>
     <style>
-        
         .container {
             border: 3px solid goldenrod;
             display: flex;
             height: 80vh;
-            /* justify-content: center; */
+            justify-content: center;
             /* Horizentally makes our contenet centre  */
-            /*align-items: center;*/ /*used when we have only one lines*/
+            align-items: center; 
+            /*used when we have only one lines*/
             /* flex-direction: column; */
             flex-direction: row;
+            /* align-content: flex-start; */
             /* flex-direction: row-reverse; */
             /* this can also be used for the row */
             /* Vertically make s our content centre */
@@ -60,16 +61,15 @@
             background-color: blueviolet;
         } 
         .item1{
-            /* flex-grow:2;  */
+            /* flex-grow:1;  */
             /* cover more place for the content  */
             flex-shrink: 2;
             /* goes down side and cover the place */
-            align-self: center;  
+            /* align-self: center;   */
             /* diable the align-content: ; then it will work  */
         }
     </style>
 </head>
-
 <body>
     <main>
         <div class="container">

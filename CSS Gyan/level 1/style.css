@@ -1,0 +1,50 @@
+/* h1 {
+  color: rgb(122, 226, 87);
+}
+h2 {
+  color: rgb(146, 231, 156);
+}
+
+p{
+    color: rgb(95, 160, 120);
+}
+button{
+    color: rgb(100, 8, 46);
+    background-color: rgb(105, 144, 105);
+}
+
+body{
+    background-color: rgb(25, 25, 25);
+} */
+
+/* Universal Selector  */
+* {
+  color: blueviolet;
+  background-color: rgb(38, 36, 36);
+}
+/* Element Selector  */
+h1 {
+  color: rgb(122, 226, 87);
+}
+button {
+  color: rgb(100, 8, 46);
+  background-color: rgb(105, 144, 105);
+}
+/* Id Selector  */
+
+#myheadingone{
+  color: rgb(85, 86, 83);
+}
+#myheadingtwo{
+  color: rgb(69, 87, 33);
+}
+#myheadingthree{
+  color: rgb(165, 231, 31);
+}
+
+/* classs Selector   */
+.myclass{
+  color: rgb(182, 172, 166);
+}
+
+

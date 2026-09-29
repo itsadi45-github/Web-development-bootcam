@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ==========================================
+       Primary SEO Meta Tags
+  =========================================== -->
+  <title>Flexible Subscription Plans & Pricing | Your Brand Name</title>
+  <meta name="description" content="Choose the perfect subscription plan for your workflow. Explore transparent monthly and annual pricing for Basic, Pro, and Enterprise tiers. Upgrade anytime.">
+  <meta name="keywords" content="pricing plans, subscription pricing, pro plan, enterprise software rates">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://example.com/pricing">
+
+  <!-- Open Graph / Social Media Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/pricing">
+  <meta property="og:title" content="Flexible Subscription Plans & Pricing | Your Brand Name">
+  <meta property="og:description" content="Transparent pricing designed for individuals, small teams, and enterprise scale. Save up to 20% with annual billing.">
+  <meta property="og:image" content="https://example.com/og-pricing-image.jpg">
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Flexible Subscription Plans & Pricing | Your Brand Name">
+  <meta name="twitter:description" content="Transparent pricing designed for individuals, small teams, and enterprise scale.">
+  <meta name="twitter:image" content="https://example.com/og-pricing-image.jpg">
+
+  <!-- ==========================================
+       Structured Data (JSON-LD) for Search Snippets
+  =========================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Software Platform Subscription",
+    "description": "Flexible cloud software plans for individuals, teams, and enterprise organizations.",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "USD",
+      "lowPrice": "7.00",
+      "highPrice": "79.00",
+      "offerCount": "3",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Basic Plan",
+          "price": "9.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro Plan",
+          "price": "29.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Enterprise Plan",
+          "price": "79.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* ==========================================
+       Global Reset & CSS Variables
+    =========================================== */
+    *, *::before, *::after { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
+
+    :root {
+      --transition-speed: 0.3s;
+    }
+
+    /* Dark Theme Variables */
+    [data-theme="dark"] {
+      --bg: #0f0f1a;
+      --card-bg: #1a1a2e;
+      --card-border: #2a2a4a;
+      --card-hover-border: #7c5cfc;
+      --text-primary: #f0f0f5;
+      --text-secondary: #9898b0;
+      --accent: #7c5cfc;
+      --accent-hover: #6a4ae0;
+      --badge-bg: #7c5cfc;
+      --badge-text: #ffffff;
+      --toggle-bg: #2a2a4a;
+      --toggle-dot: #7c5cfc;
+      --feature-dot: #7c5cfc;
+      --cta-bg: transparent;
+      --cta-border: #7c5cfc;
+      --cta-text: #7c5cfc;
+      --cta-hover-bg: #7c5cfc;
+      --cta-hover-text: #ffffff;
+      --popular-cta-bg: #7c5cfc;
+      --popular-cta-text: #ffffff;
+      --popular-cta-hover-bg: #6a4ae0;
+      --popular-cta-hover-text: #ffffff;
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      --popular-shadow: 0 8px 40px rgba(124, 92, 252, 0.25);
+      --theme-icon-sun: block;
+      --theme-icon-moon: none;
+    }
+
+    /* Light Theme Variables */
+    [data-theme="light"] {
+      --bg: #f0f0f5;
+      --card-bg: #ffffff;
+      --card-border: #e0e0e8;
+      --card-hover-border: #7c5cfc;
+      --text-primary: #1a1a2e;
+      --text-secondary: #6a6a80;
+      --accent: #6a4ae0;
+      --accent-hover: #5a3cc0;
+      --badge-bg: #6a4ae0;
+      --badge-text: #ffffff;
+      --toggle-bg: #d8d8e4;
+      --toggle-dot: #6a4ae0;
+      --feature-dot: #6a4ae0;
+      --cta-bg: transparent;
+      --cta-border: #6a4ae0;
+      --cta-text: #6a4ae0;
+      --cta-hover-bg: #6a4ae0;
+      --cta-hover-text: #ffffff;
+      --popular-cta-bg: #6a4ae0;
+      --popular-cta-text: #ffffff;
+      --popular-cta-hover-bg: #5a3cc0;
+      --popular-cta-hover-text: #ffffff;
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      --popular-shadow: 0 8px 40px rgba(106, 74, 224, 0.2);
+      --theme-icon-sun: none;
+      --theme-icon-moon: block;
+    }
+
+    /* Base Body Styling */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      transition: background var(--transition-speed), color var(--transition-speed);
+    }
+
+    /* Header Section */
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    header h1 {
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      color: var(--text-secondary);
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      transition: color var(--transition-speed);
+    }
+
+    /* Theme Toggle Button */
+    .theme-toggle {
+      position: fixed;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background var(--transition-speed), border-color var(--transition-speed), transform 0.2s;
+      z-index: 10;
+    }
+
+    .theme-toggle:hover { transform: scale(1.1); }
+
+    .theme-toggle svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--text-primary);
+      transition: fill var(--transition-speed);
+    }
+
+    .theme-toggle .icon-sun { display: var(--theme-icon-sun); }
+    .theme-toggle .icon-moon { display: var(--theme-icon-moon); }
+
+    /* Billing Toggle Controls */
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .toggle-label {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color var(--transition-speed);
+    }
+
+    .toggle-label.active { color: var(--text-primary); }
+
+    .toggle-switch {
+      position: relative;
+      width: 56px;
+      height: 30px;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .toggle-switch input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .toggle-track {
+      position: absolute;
+      inset: 0;
+      background: var(--toggle-bg);
+      border-radius: 15px;
+      transition: background var(--transition-speed);
+    }
+
+    .toggle-switch input:checked ~ .toggle-track {
+      background: var(--accent);
+    }
+
+    .toggle-dot {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 24px;
+      height: 24px;
+      background: #ffffff;
+      border-radius: 50%;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+
+    .toggle-switch input:checked ~ .toggle-dot {
+      transform: translateX(26px);
+    }
+
+    .save-badge {
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 20px;
+      letter-spacing: 0.03em;
+    }
+
+    /* Main Container & Layout */
+    main {
+      width: 100%;
+      max-width: 1100px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      width: 100%;
+      align-items: start;
+    }
+
+    /* Pricing Card Styles */
+    article.card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2.25rem 1.75rem;
+      position: relative;
+      transition:
+        background var(--transition-speed),
+        border-color var(--transition-speed),
+        box-shadow var(--transition-speed),
+        transform 0.25s;
+      box-shadow: var(--shadow);
+    }
+
+    article.card:hover {
+      transform: translateY(-4px);
+    }
+
+    article.card.popular {
+      border-color: var(--accent);
+      box-shadow: var(--popular-shadow);
+      transform: scale(1.04);
+      z-index: 2;
+    }
+
+    article.card.popular:hover {
+      transform: scale(1.04) translateY(-4px);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .card-tier {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .price-container {
+      height: 56px;
+      display: flex;
+      align-items: baseline;
+      gap: 0.15rem;
+      margin-bottom: 0.35rem;
+      overflow: hidden;
+    }
+
+    .currency {
+      font-size: 1.4rem;
+      font-weight: 600;
+      align-self: flex-start;
+      margin-top: 0.3rem;
+    }
+
+    .price {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1;
+      transition: opacity 0.25s, transform 0.25s;
+      letter-spacing: -0.03em;
+    }
+
+    .price.animating {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    .period {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.75rem;
+      min-height: 1.3em;
+    }
+
+    /* Features List */
+    .features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .features li {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.55rem 0;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--card-border);
+      transition: color var(--transition-speed), border-color var(--transition-speed);
+    }
+
+    .features li:last-child { border-bottom: none; }
+
+    .features li svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      fill: var(--feature-dot);
+    }
+
+    /* Buttons / CTAs */
+    .cta {
+      display: block;
+      width: 100%;
+      padding: 0.8rem 1.5rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      transition:
+        background var(--transition-speed),
+        color var(--transition-speed),
+        border-color var(--transition-speed),
+        transform 0.2s;
+      text-decoration: none;
+    }
+
+    .cta:hover { transform: scale(1.03); }
+    .cta:active { transform: scale(0.98); }
+
+    .cta.outline {
+      background: var(--cta-bg);
+      border: 1.5px solid var(--cta-border);
+      color: var(--cta-text);
+    }
+
+    .cta.outline:hover {
+      background: var(--cta-hover-bg);
+      color: var(--cta-hover-text);
+    }
+
+    .cta.filled {
+      background: var(--popular-cta-bg);
+      border: 1.5px solid var(--popular-cta-bg);
+      color: var(--popular-cta-text);
+    }
+
+    .cta.filled:hover {
+      background: var(--popular-cta-hover-bg);
+      color: var(--popular-cta-hover-text);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 900px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+      }
+      article.card.popular {
+        transform: scale(1);
+        order: -1;
+      }
+      article.card.popular:hover {
+        transform: translateY(-4px);
+      }
+    }
+
+    @media (min-width: 901px) and (max-width: 1050px) {
+      .pricing-grid {
+        gap: 1rem;
+      }
+      article.card {
+        padding: 1.75rem 1.25rem;
+      }
+      .price { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dark/Light Theme Switcher Button -->
+  <button class="theme-toggle" type="button" aria-label="Toggle dark and light theme">
+    <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0-3a1 1 0 001-1V1a1 1 0 00-2 0v2a1 1 0 001 1zm0 18a1 1 0 00-1 1v2a1 1 0 002 0v-2a1 1 0 00-1-1zm9-9h-2a1 1 0 000 2h2a1 1 0 000-2zM4 12H2a1 1 0 000 2h2a1 1 0 000-2zm15.07-6.36l-1.41 1.41a1 1 0 000 1.42 1 1 0 001.41 0l1.42-1.41a1 1 0 00-1.42-1.42zM6.34 17.66l-1.41 1.41a1 1 0 000 1.42 1 1 0 001.41 0l1.42-1.41a1 1 0 00-1.42-1.42zM19.07 17.66a1 1 0 00-1.41 0l-1.42 1.41a1 1 0 001.42 1.42l1.41-1.41a1 1 0 000-1.42zM6.34 6.34a1 1 0 00-1.41 0L3.51 7.76a1 1 0 001.41 1.41l1.42-1.41a1 1 0 000-1.42z"/></svg>
+    <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M21.64 13a1 1 0 00-1.05-.14 8.05 8.05 0 01-3.37.73 8.15 8.15 0 01-8.14-8.14 8.59 8.59 0 01.25-2A1 1 0 008 2.36a10.14 10.14 0 1014 11.69 1 1 0 00-.36-1.05z"/></svg>
+  </button>
+
+  <!-- Semantic Page Header -->
+  <header>
+    <h1>Simple, transparent pricing</h1>
+    <p>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
+  </header>
+
+  <!-- Billing Option Controls -->
+  <div class="toggle-container">
+    <span class="toggle-label active" id="monthlyLabel">Monthly</span>
+    <label class="toggle-switch" for="billingToggle">
+      <input type="checkbox" id="billingToggle" aria-label="Toggle annual billing to save 20%">
+      <span class="toggle-track"></span>
+      <span class="toggle-dot"></span>
+    </label>
+    <span class="toggle-label" id="annualLabel">Annual</span>
+    <span class="save-badge">Save 20%</span>
+  </div>
+
+  <!-- Semantic Main Content Container -->
+  <main>
+    <div class="pricing-grid">
+
+      <!-- Card Tier: Basic -->
+      <article class="card" data-monthly="9" data-annual="7">
+        <h2 class="card-tier">Basic</h2>
+        <p class="card-title">For individuals getting started</p>
+        <div class="price-container">
+          <span class="currency">$</span>
+          <span class="price">9</span>
+        </div>
+        <div class="period">per month</div>
+        <ul class="features">
+          <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>5 Projects</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>10 GB Storage</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Basic Analytics</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Email Support</li>
+        </ul>
+        <a href="#basic-plan" class="cta outline" aria-label="Get started with the Basic Plan">Get Started</a>
+      </article>
+
+      <!-- Card Tier: Pro -->
+      <article class="card popular" data-monthly="29" data-annual="23">
+        <span class="popular-badge">Most Popular</span>
+        <h2 class="card-tier">Pro</h2>
+        <p class="card-title">For professionals & small teams</p>
+        <div class="price-container">
+          <span class="currency">$</span>
+          <span class="price">29</span>
+        </div>
+        <div class="period">per month</div>
+        <ul class="features">
+          <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Unlimited Projects</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>100 GB Storage</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Advanced Analytics</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Priority Support</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>API Access</li>
+        </ul>
+        <a href="#pro-plan" class="cta filled" aria-label="Get started with the Pro Plan">Get Started</a>
+      </article>
+
+      <!-- Card Tier: Enterprise -->
+      <article class="card" data-monthly="79" data-annual="63">
+        <h2 class="card-tier">Enterprise</h2>
+        <p class="card-title">For large-scale operations</p>
+        <div class="price-container">
+          <span class="currency">$</span>
+          <span class="price">79</span>
+        </div>
+        <div class="period">per month</div>
+        <ul class="features">
+          <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Unlimited Everything</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>1 TB Storage</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Custom Analytics</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>24/7 Dedicated Support</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>SSO & Audit Logs</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>SLA Guarantee</li>
+        </ul>
+        <a href="#enterprise-plan" class="cta outline" aria-label="Contact sales for the Enterprise Plan">Contact Sales</a>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Client-Side JavaScript Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('billingToggle');
+      const monthlyLabel = document.getElementById('monthlyLabel');
+      const annualLabel = document.getElementById('annualLabel');
+      const cards = document.querySelectorAll('article.card');
+      const themeToggle = document.querySelector('.theme-toggle');
+      const html = document.documentElement;
+
+      // Handle Billing Toggle Switch
+      toggle.addEventListener('change', () => {
+        const isAnnual = toggle.checked;
+
+        monthlyLabel.classList.toggle('active', !isAnnual);
+        annualLabel.classList.toggle('active', isAnnual);
+
+        cards.forEach(card => {
+          const priceEl = card.querySelector('.price');
+          const periodEl = card.querySelector('.period');
+
+          priceEl.classList.add('animating');
+
+          setTimeout(() => {
+            const monthly = card.dataset.monthly;
+            const annual = card.dataset.annual;
+            priceEl.textContent = isAnnual ? annual : monthly;
+            periodEl.textContent = isAnnual ? 'per month, billed annually' : 'per month';
+
+            priceEl.classList.remove('animating');
+          }, 250);
+        });
+      });
+
+      // Handle Theme Switcher (Dark/Light)
+      themeToggle.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', nextTheme);
+      });
+    });
+  </script>
+</body>
+</html>
